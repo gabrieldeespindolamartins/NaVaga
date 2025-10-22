@@ -5,10 +5,13 @@ import Footer from "./components/Footer";
 function App() {
 
   return (
-    <>
-    <MainContent />
-    <AnimatedLine />
-    </>
+    <div>
+      <div>
+        <MainContent />
+        <AnimatedLine />
+      </div>
+      <Footer />
+    </div>
   );
 } 
 
