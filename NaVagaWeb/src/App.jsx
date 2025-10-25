@@ -1,18 +1,18 @@
-import MainContent from "./components/MainContent";
-import AnimatedLine from "./components/AnimatedLine";
-import Footer from "./components/Footer";
+  import MainContent from "./components/MainContent";
+  import AnimatedLine from "./components/AnimatedLine";
+  import Footer from "./components/Footer";
 
-function App() {
+  function App() {
 
-  return (
-    <div>
-      <div>
-        <MainContent />
-        <AnimatedLine />
+    return (
+      <div className="flex flex-col min-h-screen">
+        <div className="grow">
+          <MainContent/>
+          <AnimatedLine />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
-} 
+    );
+  } 
 
-export default App
+  export default App
