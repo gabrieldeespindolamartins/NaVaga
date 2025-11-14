@@ -8,7 +8,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import InitialScreen from './src/screens/InitialScreen.jsx';
 import Login from './src/screens/Login.jsx';
-import Register from './src/screens/Register/Register.jsx';
+import Register from './src/screens/Register.jsx';
 
 
 const Stack = createNativeStackNavigator();
