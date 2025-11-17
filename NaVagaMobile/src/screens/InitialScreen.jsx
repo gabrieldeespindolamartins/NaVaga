@@ -1,7 +1,7 @@
-import { Text, TouchableOpacity, Image, StyleSheet, } from "react-native";
+import { TouchableOpacity, Image, StyleSheet, } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { fonts } from "./theme/fonts";
-import AppText from "./theme/AppText";
+import { fonts } from "../theme/fonts";
+import AppText from "../theme/AppText";
 
 
 
@@ -13,20 +13,18 @@ const styles = StyleSheet.create({
         backgroundColor: '#2F3B42',
         padding: 25,
     },
-    g
+    
     image: {
         height: 300
     },
 
     title: {
-        color: '#FFFFFF',
         alignSelf: 'baseline',
         fontSize: 35,
         fontFamily: fonts.bold,
     },
 
     paragraph: {
-        color: '#FFFFFF',
         fontSize: 20,
         marginBottom: 100,
     },
@@ -41,7 +39,6 @@ const styles = StyleSheet.create({
     
     registerText: {
         textAlign:'center',
-        color: '#FFFFFF',
         fontSize: 18,
         fontFamily: fonts.bold,
     },
