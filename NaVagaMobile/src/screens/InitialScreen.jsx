@@ -13,10 +13,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#2F3B42',
         padding: 25,
     },
-    
-    image: {
-        height: 300
-    },
 
     title: {
         alignSelf: 'baseline',
@@ -54,7 +50,7 @@ export default function InitialScreen({ navigation }) {
     return(
         <SafeAreaView style={styles.container}>  
             <Image
-                style={styles.image}
+                style={{height: 300}}
                 source={require('../../images/imageInitial.png')}
             />
             
