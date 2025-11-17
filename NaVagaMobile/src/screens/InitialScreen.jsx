@@ -1,5 +1,7 @@
-import { View, Text, TouchableOpacity, Image, StyleSheet, } from "react-native";
+import { Text, TouchableOpacity, Image, StyleSheet, } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { fonts } from "./theme/fonts";
+import AppText from "./theme/AppText";
 
 
 
@@ -8,38 +10,47 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems:'center',
         justifyContent: 'center',
-        backgroundColor: '#2F3B42'
+        backgroundColor: '#2F3B42',
+        padding: 25,
     },
+    g
     image: {
         height: 300
     },
 
     title: {
         color: '#FFFFFF',
+        alignSelf: 'baseline',
+        fontSize: 35,
+        fontFamily: fonts.bold,
     },
 
     paragraph: {
         color: '#FFFFFF',
+        fontSize: 20,
+        marginBottom: 100,
     },
     
     registerButton: {
-        
         justifyContent:'center',
-        height: 45,
-        width: '80%',
+        height: 50,
+        width: '100%',
         borderRadius:10,
-        
         backgroundColor: '#42BAFF',
-        
     },
+    
     registerText: {
         textAlign:'center',
         color: '#FFFFFF',
- 
+        fontSize: 18,
+        fontFamily: fonts.bold,
     },
 
     loginText: {
+        marginTop: 20,
+        fontSize: 15,
         color:'#42BAFF',
+        fontFamily: fonts.bold,
     },
 })
 export default function InitialScreen({ navigation }) {
@@ -50,15 +61,15 @@ export default function InitialScreen({ navigation }) {
                 source={require('../../images/imageInitial.png')}
             />
             
-            <Text style={styles.title}>Bora dar um stop!</Text>
-            <Text style={styles.paragraph}>Conheça a melhor forma de poupar tempo no trânsito.</Text>
+            <AppText style={styles.title}>Bora dar um stop!</AppText>
+            <AppText style={styles.paragraph}>Conheça a melhor forma de poupar tempo no trânsito.</AppText>
 
             <TouchableOpacity onPress={() => navigation.navigate('Register')} style={styles.registerButton}>
-                <Text style={styles.registerText}>Cadastrar-se</Text>
+                <AppText style={styles.registerText}>Cadastrar-se</AppText>
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => navigation.navigate('Login')} >
-                <Text style={styles.loginText}>Já tenho uma conta</Text>
+                <AppText style={styles.loginText}>Já tenho uma conta</AppText>
             </TouchableOpacity>
 
         </SafeAreaView>
