@@ -10,6 +10,7 @@ import { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-googl
 import InitialScreen from './src/screens/InitialScreen.jsx';
 import Login from './src/screens/Login.jsx';
 import Register from './src/screens/Register.jsx';
+import SplashScreen from "./src/screens/SplashScreen.jsx";
 
 Text.defaultProps = Text.defaultProps || {};
 Text.defaultProps.style = {fontFamily: "Montserrat_400Regular"}
@@ -27,10 +28,13 @@ export default function App() {
 
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Initial" screenOptions={{ headerShown: false }}>
-                <Stack.Screen name="Initial" component={InitialScreen}/>
+            <Stack.Navigator initialRouteName="SplashScreen" screenOptions={{ headerShown: false }}>
+                <Stack.Screen name="SplashScreen" component={SplashScreen}/>
+                <Stack.Screen name="InitialScreen" component={InitialScreen}/>
                 <Stack.Screen name="Register" component={Register}/>
                 <Stack.Screen name="Login" component={Login}/>
+                
+                
             </Stack.Navigator>
         </NavigationContainer>
     )
