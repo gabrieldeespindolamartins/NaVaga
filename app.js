@@ -2,6 +2,7 @@
  * @file app.js
  * @description Ponto de entrada principal para a aplicação backend NaVaga.
  * Configura o servidor Express, middlewares e rotas da API.
+ * texte
  */
 
 // Carrega variáveis de ambiente do arquivo .env
@@ -22,7 +23,10 @@ const historicoRoutes = require("./routes/historico"); // Importa as rotas de hi
 const app = express();
 
 // Configura os middlewares
-app.use(cors()); // Habilita CORS para permitir requisições de diferentes origens
+app.use(cors({
+  origin: "*",
+  credentials: false
+})); // Habilita CORS para permitir requisições de diferentes origens
 app.use(bodyParser.json()); // Permite que a aplicação parseie requisições com corpo JSON
 
 // Define as rotas da API
