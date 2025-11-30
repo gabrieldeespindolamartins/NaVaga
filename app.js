@@ -2,7 +2,7 @@
  * @file app.js
  * @description Ponto de entrada principal para a aplicação backend NaVaga.
  * Configura o servidor Express, middlewares e rotas da API.
- * texte
+ * text
  */
 
 // Carrega variáveis de ambiente do arquivo .env
