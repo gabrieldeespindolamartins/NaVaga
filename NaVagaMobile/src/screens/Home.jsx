@@ -44,8 +44,8 @@ const styles = StyleSheet.create({
 
     bottomSection: {
         backgroundColor: '#2F3B42',
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
+        borderTopLeftRadius: 32,
+        borderTopRightRadius: 32,
         paddingHorizontal: 20,
         paddingTop: 15,
         paddingBottom: 10,
@@ -158,6 +158,7 @@ export default function Home({ navigation }) {
                             placeholderTextColor="#8A9399"
                             value={searchText}
                             onChangeText={setSearchText}
+                            onFocus={() => navigation.navigate('Pesquisa')}
                         />
                         <TouchableOpacity>
                             <Image
@@ -191,7 +192,7 @@ export default function Home({ navigation }) {
 
                     <TouchableOpacity 
                         style={styles.navItemHistorico}
-                        onPress={() => setActiveTab("historico")}
+                        onPress={() => navigation.navigate('Historico')}
                     >
                         <Image
                             style={styles.navIcon}
@@ -204,7 +205,7 @@ export default function Home({ navigation }) {
 
                     <TouchableOpacity 
                         style={styles.navItemConta}
-                        onPress={() => setActiveTab("conta")}
+                        onPress={() => navigation.navigate('Conta')}
                     >
                         <Image
                             style={styles.navIcon}
